@@ -55,7 +55,6 @@ pub fn search<'a> (
         if line.contains(query) {
             result.push(line);
         }
-        //do something with lines 
     }
     return result;
 }
@@ -109,6 +108,5 @@ Trust me.";
         );
 
     }
-
 
 }

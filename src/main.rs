@@ -5,12 +5,12 @@ use minigrep::Config;
 
 
 fn main() {
-    let args : Vec<String> = env::args().collect();
+    // let args : Vec<String> = env::args().collect();
     //dbg!(args);
 
 
     // we want to check if there is value , if not use the err in anonymous function and print it.
-    let config =  Config::build(&args).unwrap_or_else(|err|{
+    let config =  Config::build(env::args()).unwrap_or_else(|err|{
         eprintln!("Problem parsing arguments: {err}");
         process::exit(1);
     });
